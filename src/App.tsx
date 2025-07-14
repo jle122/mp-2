@@ -3,6 +3,11 @@ import Drinks from "./components/DrinkListContents";
 import {useState, useEffect} from "react";
 import type {Drink} from "./interfaces/Drink";
 
+const AllDiv=styled.div`
+  color:blue;
+  background-color: blue;
+`
+
 export default function App() {
   const [d, setD] = useState<Drink[]>([]);
 
@@ -18,9 +23,9 @@ export default function App() {
   }, [d.length]);
 
   return (
-    <div>
+    <AllDiv>
       <Drinks data={d}/>
-    </div>
+    </AllDiv>
   )
 
 }
